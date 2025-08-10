@@ -15,7 +15,7 @@ class AppTestCase(unittest. TestCase):
         assert "<title>Radnitz Oriasotie</title>" in html
         # Add more tests relating to the home page
         assert "About Me" in html
-        assert "<h2 class="text">Education:</h2>" in html
+        assert '<h2 class="text">Education:</h2>' in html
         assert "Hobbies" in html
         assert "<h2>Work Experience:</h2>" in html
 
