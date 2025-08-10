@@ -1,7 +1,7 @@
 {
     "about": {
         "title": "About",
-        "content": "22 Year Old Computer Science Major with an interest in Production Engineering and ML"
+        "content": "Hi, I'm Radnitz, A 22 Year Old Computer Science Major with an interest in Production Engineering, Site Reliability Engineering, and Machine Learning."
     },
     "picture": "static/img/Profile_avatar_placeholder_large.png",
     "education":[
@@ -31,7 +31,7 @@
             "description": "Learned and practiced PE skills.\nRecieved mentorship from Meta PEs."
         }
     ],
-    "title": "Radnitz Oriastie",
+    "title": "Radnitz Oriasotie",
     "hobbies-list": [
         {
             "name": "Music",

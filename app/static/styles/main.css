@@ -1,3 +1,9 @@
+@import url(text-pop-up.css);
+@import url(scale-up-center.css);
+@import url(shadow-pop-bl.css);
+@import url(text-shadow-pop-top.css);
+@import url(text-shadow-drop-center.css);
+@import url(slide-fwd-center.css);
 p, h1, h2, h3, h4, h5, h6, button {
     font-family: "Roboto", serif;
 }
@@ -6,23 +12,24 @@ li {
 }
 
 body {
-    background-color: #f5f5f9;
+    background-color: #0c0515;
     background-size: cover;
     width: auto; 
     overflow-x: hidden;
     font-family: "Roboto", serif;
     margin: 0px;
+    color: #a393bf;
 }
 
 .nav-bar {
     width: 100%;
     display: block;
-    background-color: #1d539f;
+    background-color: #6a31be;
     font-family: "Roboto", serif;
     font-weight: 700 !important;
     padding-top: 10px;
     overflow: auto;
-    border-bottom: 2px solid #fff;
+    border-bottom: 2px solid #0c0515;
 }
 
 .nav-content .logo-touch-target {
@@ -49,7 +56,7 @@ body {
     float: left;
     text-align: center;
     padding: 0px 12px;
-    color: white;
+    color: a393bf;
     text-decoration: none;
     font-size: 17px;
 }
@@ -59,7 +66,7 @@ body {
 }
 .nav-content .menu-icon:hover {
     background-color: #ddd;
-    color: black;
+    color:#0c0515;
 }
 .nav-content .icon-nav {
     height: 30px;
@@ -70,7 +77,7 @@ body {
 }
 
 .profile {
-    background-color: #1d539f !important;
+    background-color: #6a31be;
     text-align: center;
     height: 320px;
     margin-bottom: 10px;
@@ -113,16 +120,25 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    
 }
-
-.container{
+.holder{
+    display: flex;
+    width: 80%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.holder .container{
     display: flex;
     width: 70%;
-    border: #1C539F solid 2px;
+    color: #a393bf;
     border-radius: 10px;
     padding: 1rem 1rem 1rem 5rem;
     margin-bottom: 2rem;
+    background-color: #481a6a;
 }
+
 .date{
     padding-top: 1rem;
 }
@@ -140,7 +156,7 @@ hr {
     clear:both;
     display:block;
     width: 96%;               
-    background-color:#000000;
+    background-color: #a393bf;
     height: 1px;
   }
 
@@ -277,3 +293,36 @@ hr {
         width: 95%;
     }
 }
+
+
+/**
+ * ----------------------------------------
+ * animation text-pop-up-top
+ * ----------------------------------------
+ */
+/**
+ * ----------------------------------------
+ * animation text-pop-up-top
+ * ----------------------------------------
+ */
+
+.text-shadow-pop-top .text{
+    color: #a393bf;
+ }
+
+.text-shadow-pop-top:hover .text{
+	animation: text-shadow-pop-top 0.6s both;
+}
+
+.holder:hover .container {
+	animation: shadow-pop-bl 0.3s cubic-bezier(0.470, 0.000, 0.745, 0.715) forwards;
+}
+
+.text-shadow-drop-center:hover .text {
+	animation: text-shadow-drop-center 0.3s both;
+}
+
+.text-shadow-drop-center .text{
+    color: #a393bf;
+ }
+
