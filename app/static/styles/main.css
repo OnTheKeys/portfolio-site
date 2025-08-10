@@ -319,7 +319,7 @@ hr {
 }
 
 .text-shadow-drop-center:hover .text {
-	animation: text-shadow-drop-center 0.9s both;
+	animation: text-shadow-drop-center 0.3s both;
 }
 
 .text-shadow-drop-center .text{
