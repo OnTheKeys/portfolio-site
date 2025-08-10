@@ -12,7 +12,7 @@ class AppTestCase(unittest. TestCase):
         response = self.client.get("/")
         assert response.status_code == 200
         html = response.get_data(as_text=True)
-        assert "<title>Name Of the Developer</title>" in html
+        assert "<title>Radnitz Oriastie</title>" in html
         # Add more tests relating to the home page
         assert "About Me" in html
         assert "<h2>Education:</h2>" in html
