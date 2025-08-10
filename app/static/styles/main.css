@@ -29,6 +29,7 @@ body {
     font-weight: 700 !important;
     padding-top: 10px;
     overflow: auto;
+    color:#a393bf;
     border-bottom: 2px solid #0c0515;
 }
 
@@ -36,6 +37,7 @@ body {
     display: inline-flex;
     height: 60%;
     width: 350px;
+
 }
 
 .nav-content .nav-logo {
@@ -56,9 +58,9 @@ body {
     float: left;
     text-align: center;
     padding: 0px 12px;
-    color: a393bf;
     text-decoration: none;
     font-size: 17px;
+    color:#a393bf;
 }
 .nav-content .menu-icon {
     padding: 10px 10px;
