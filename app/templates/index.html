@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta property="og:title" content="Personal Portfolio">
+    <meta property="og:description" content="My Personal Portfolio">
+    <meta property="og:url" content="{{ url }}">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+    <link lang='sass' rel="stylesheet" href="./static/styles/main.css">
+    <link rel='icon' href='./static/img/icons/favicon.ico' type='image/x-icon' />
+    <title>{{ title }}</title>
+</head>
+
+<body>
+    <header class="nav-bar">
+        <div class="nav-content">
+            <a href="/">
+                <div class="nav-logo">
+                    <img src="./static/img/logo.svg" />
+                </div>
+            </a>
+            <a href="/hobbies" class="menu-icon">
+                <div class="nav-content">
+                    <span>Hobbies<img class="icon-nav" src="../static/img/icons/hobby.png" alt="Hobbies"></span>
+                </div>
+            </a>
+            <a href="/timeline" class="menu-icon">
+                <div class="nav-content">
+                    <span>Timeline<img class="icon-nav" src="../static/img/icons/timeline.png" alt="Paper and pen icon"></span>
+                </div>
+            </a>
+            <a href="#education" class="menu-icon">
+                <div class="nav-content">
+                    <span>Education<img class="icon-nav" src="../static/img/icons/education.png" alt="Education"></span>
+                </div>
+            </a>
+            <a href="#experience" class="menu-icon">
+                <div class="nav-content">
+                    <span>Experience<img class="icon-nav" src="../static/img/icons/experience.png" alt="Experience"></span>
+                </div>
+            </a>
+            <a href="#trips" class="menu-icon">
+                <div class="nav-content">
+                    <span>Travel<img class="icon-nav" src="../static/img/icons/travel.png" alt="World icon"></span>
+                </div>
+            </a>
+    </header>
+
+    <div class="profile">
+        <div class="slide-fwd-center">
+            <div id="profile-picture" class="profile-picture">
+                <img class="pfp" src="{{ picture }}">
+            </div> 
+        </div>
+        <div class="text-shadow-drop-center">
+            <h1 class="text">{{ title }}</h1>
+        </div>
+    </div>
+    
+    <div class="content">
+        <div class="text-shadow-pop-top">
+            <h2 class="text">About Me</h2>
+        </div>
+        <div class="holder">
+            <div class="container">
+        <h3>{{ about }}</h3>
+            </div>
+        </div>
+    </div>
+    
+    <div class="entry-series" id="education">
+        <hr>
+        <div class="text-shadow-pop-top">
+        <h2 class="text">Education:</h2>
+        </div>
+        {% for edu in edu_items %}
+        <div class="holder">
+            <div class="container">
+                <p id="dates" class="date">{{edu.start_date}} - {{edu.end_date}}</p>
+                <div class="column">
+                    <h3>{{edu.name }}</h3>
+                    <h4>{{edu.degree}}</h4>
+                    <p><i>{{edu.grade}}</i></p>
+                    <p><b>Skills Learned:</b></p>
+                    <p>{{edu.skills}}</p>
+            
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <div class="entry-series" id="experience">
+        <hr>
+        <div class="text-shadow-pop-top">
+        <h2 class="text">Work Experience:</h2>
+        </div>
+        {% for job in job_items %}
+        <div class="holder">
+            <div class="container">
+                <p id="dates" class="date">{{job.start_date}} - {{job.end_date}}</p>
+                <div class="column">
+                    <h3>{{job.title }}</h3>
+                    <h4>{{job.company_name}}</h4>
+                    <p><b>Description:</b></p>
+                    <p><i>{{job.description}}</i></p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <div class="content">
+        <hr>
+        <div class="text-shadow-pop-top">
+        <h2 class="text">Hobbies</h2>
+        </div>
+        <div class="content">
+            <p>Check here other things I'm interested in: <a href="/hobbies" class="icon-links">Hobbies -></a></p>   
+        </div>
+    </div>
+    <div class="content" id="trips">
+        <hr>
+        <h2>Travel Map</h2>
+        <p>Some of the places I've been to!</p>
+        <div class="map">
+            <!-- Map image with pointers of places I've traveled to -->
+            <img src="../static/img/map.svg" alt="map with pointers of places Ive travel to" width="100%" height="100%">
+            {% for country in countries %}
+                <div class="label" style="top: {{country.top}}; left: {{country.left}}">
+                    <span>
+                        {{ country.name}}
+                    </span>
+                </div>
+            {% endfor %}
+        </div> 
+</body>
+</html>
