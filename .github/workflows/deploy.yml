@@ -4,7 +4,7 @@ on:
   push:
     branches:
        - main
-    workflow_dispatch:
+  workflow_dispatch:
 
 jobs:
   deploy:
@@ -18,7 +18,7 @@ jobs:
          cat >> ~/.ssh/config <<END
          Host my-vps 
            HostName $SSH_IP
-           User $SSH_YSER
+           User $SSH_USER
            IdentityFIle ~/.ssh/deploy-key.pem
            StrictHostKeyChecking no
          END
