@@ -3,7 +3,7 @@
         "title": "About",
         "content": "Hi, I'm Radnitz, A 22 Year Old Computer Science Major with an interest in Production Engineering, Site Reliability Engineering, and Machine Learning."
     },
-    "picture": "static/img/Profile_avatar_placeholder_large.png",
+    "picture": "static/img/pfp.jpg",
     "education":[
         {
             "name": "Trinity College Dublin",
